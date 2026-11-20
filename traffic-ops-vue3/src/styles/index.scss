@@ -1,0 +1,178 @@
+@import './var.css';
+@import './FormCreate/index.scss';
+@import './theme.scss';
+@import 'element-plus/theme-chalk/dark/css-vars.css';
+
+.reset-margin [class*='el-icon'] + span {
+  margin-left: 2px !important;
+}
+
+// 解决抽屉弹出时，body宽度变化的问题
+.el-popup-parent--hidden {
+  width: 100% !important;
+}
+
+// 解决表格内容超过表格总宽度后，横向滚动条前端顶不到表格边缘的问题
+.el-scrollbar__bar {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* nprogress 适配 element-plus 的主题色 */
+#nprogress {
+  & .bar {
+    background-color: var(--el-color-primary) !important;
+  }
+
+  & .peg {
+    box-shadow:
+      0 0 10px var(--el-color-primary),
+      0 0 5px var(--el-color-primary) !important;
+  }
+
+  & .spinner-icon {
+    border-top-color: var(--el-color-primary);
+    border-left-color: var(--el-color-primary);
+  }
+}
+
+
+.extendtable {
+  display: flex;
+}
+.smallwith {
+  display: flex;
+  width: calc(100vw - var(--left-menu-min-width) - 70px);
+}
+.bigwidth {
+  display: flex;
+  width: calc(100vw - var(--left-menu-max-width) - 70px);
+}
+.dialogNotitle.com-dialog {
+  padding: 0!important;
+  background: #0630A5!important;
+  border-radius: 10px!important;
+  .el-dialog__header {
+    display: none!important;
+  }
+  .el-dialog__body {
+    padding: 0!important;
+    height: 100%;
+    background: #0630A5!important;
+    border-radius: 10px!important;
+  }
+  .DialogNotitle-content {
+    width: 100%;
+    height: auto;
+    background: #0630A5;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .DialogNotitle-title {
+    color: #ffffff;
+    font-size: 16px;
+    padding: 15px 10px;
+    border-bottom: 1px solid #1FC7FF;
+    text-align: center;
+    span {
+      float: right;
+      cursor: pointer;
+    }
+  }
+  .bt-table {
+    .bt-table-thead {
+      display: flex;
+      margin-top: 10px;
+      height: 45px;
+      line-height: 45px;
+      background: rgba(255, 255, 255, 0.03);
+      div {
+        text-align: center;
+        font-size: 14px;
+        flex: 1;
+        color: #1FC7FF;
+      }
+    }
+    .bt-table-tbody {
+      .bt-table-tbody-item {
+        display: flex;
+        height: 45px;
+        line-height: 45px;
+        background: rgba(255, 255, 255, 0.03);
+        background-size: 100% 100%;
+        margin-top: 5px;
+        div {
+          text-align: center;
+          font-size: 14px;
+          flex: 1;
+          color: #ffffff;
+        }
+        .xh span {
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          margin-top: 8px;
+          &.bg1 {
+            background: url("../assets/imgs/dn1.png");
+            background-size: 100% 100%;
+          }
+          &.bg2 {
+            background: url("../assets/imgs/dn2.png");
+            background-size: 100% 100%;
+          }
+          &.bg3 {
+            background: url("../assets/imgs/dn3.png");
+            background-size: 100% 100%;
+          }
+        }
+
+      }
+    }
+  }
+}
+.myfullmap.com-dialog {
+  padding: 0!important;
+  .el-dialog__header {
+    display: none!important;
+  }
+  .el-dialog__body {
+    padding: 0!important;
+    height: 100%;
+    background: red;
+  }
+}
+.auditfulldia.com-dialog {
+  padding: 0!important;
+  .el-dialog__header {
+    //display: none!important;
+  }
+  .el-dialog__body {
+    padding: 0!important;
+    height: calc(100% - 54px);
+    overflow: hidden;
+  }
+}
+.form-box-wrapper {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.001), rgba(0, 0, 0, 0.001)), #FFFFFF;
+  border: 1px solid #F3F4F6;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  .addform-title {
+    color: #1F2937;
+    padding-bottom: 12px;
+    img {
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+      margin-top: -2px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.el-popper.is-light.tooltipitem, .el-popper.is-light.tooltipitem>.el-popper__arrow:before {
+  background: transparent!important;
+  border: none!important;
+}
