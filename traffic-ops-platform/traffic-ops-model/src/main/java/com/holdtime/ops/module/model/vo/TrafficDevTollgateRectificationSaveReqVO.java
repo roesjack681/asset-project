@@ -1,0 +1,49 @@
+package com.holdtime.ops.module.model.vo;
+
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.*;
+import java.util.*;
+import javax.validation.constraints.*;
+import java.util.*;
+import java.math.BigDecimal;
+import org.springframework.format.annotation.DateTimeFormat;
+import java.time.LocalDateTime;
+
+@Schema(description = "管理后台 - 卡口质量评价新增/修改 Request VO")
+@Data
+public class TrafficDevTollgateRectificationSaveReqVO {
+
+    @Schema(description = "主键", requiredMode = Schema.RequiredMode.REQUIRED, example = "12567")
+    private String id;
+
+    @Schema(description = "序号")
+    private String xh;
+
+    @Schema(description = "卡口编号")
+    private String kkbh;
+
+    @Schema(description = "方向类型")
+    private String fxlx;
+
+    @Schema(description = "检测时间")
+    private LocalDateTime jcsj;
+
+    @Schema(description = "检测不达标原因 1：传输不及时；2：号牌识别准确率低，多个用逗号分隔")
+    private String bdbyy;
+
+    @Schema(description = "数据传输及时率")
+    private BigDecimal jsl;
+
+    @Schema(description = "号牌识别准确率")
+    private BigDecimal sbhpzl;
+
+    @Schema(description = "传输标记")
+    private String csbj;
+
+    @Schema(description = "部局传输标记")
+    private String bjcsbj;
+
+    @Schema(description = "数据可用率")
+    private BigDecimal kyl;
+
+}
